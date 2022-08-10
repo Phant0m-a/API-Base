@@ -1,0 +1,19 @@
+{
+  "name": "api-base",
+  "version": "1.0.0",
+  "description": "Contains list of implementations of different free api integrations!",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "author": "Ahsan Ali",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

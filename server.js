@@ -11,6 +11,7 @@ const memeRouter = require('./routes/memeAPI/meme');
 const currencyexcRouter = require('./routes/currencyexchange/currencyexc');
 const freenbaRouter = require('./routes/free_nba/freenba');
 const gamesRouter = require('./routes/games/games');
+const chucknorrisRouter = require('./routes/chucknorris/chucknorris');
 
 // index page can receive some makeover
 app.get('/', (req,res)=>{
@@ -22,6 +23,7 @@ app.use("/api/memeApi", memeRouter);
 app.use("/api/currencyexc", currencyexcRouter);
 app.use("/api/freeNBA", freenbaRouter);
 app.use("/api/games", gamesRouter);
+app.use("/api/chuck", chucknorrisRouter);
 
 app.listen(process.env.PORT || 5000, () => {
     console.log('[+] Server restarted succesfully😎');

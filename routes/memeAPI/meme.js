@@ -18,22 +18,23 @@ memeRouter.get("/", async (req, res) => {
         font: 'Impact'
       },
       headers: {
+        //please create your own api i left my own so you could test it easily!
         'X-RapidAPI-Key': process.env.memeKEY || '48a3a76e27mshd2769ef34d9a0dep1851f9jsnfb2975d32821',
         'X-RapidAPI-Host': process.env.memeHOST || 'ronreiter-meme-generator.p.rapidapi.com',
         useQueryString: true
       }
     };
-    
+
     request(options, function (error, response, body) {
-        if (error) throw new Error(error);
-    
-        
-       res.status(200).send(body);
+      if (error) throw new Error(error);
+
+
+      res.status(200).send(body);
     });
-    
-} catch (err) {
-    res.status(401).send({success: false, message:err});
-}
+
+  } catch (err) {
+    res.status(401).send({ success: false, message: err });
+  }
 });
 
 module.exports = memeRouter;

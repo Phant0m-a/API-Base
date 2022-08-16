@@ -1,6 +1,6 @@
 {
   "name": "api-base",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Contains list of implementations of different free api integrations!",
   "main": "server.js",
   "scripts": {

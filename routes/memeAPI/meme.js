@@ -18,8 +18,8 @@ memeRouter.get("/", async (req, res) => {
         font: 'Impact'
       },
       headers: {
-        'X-RapidAPI-Key': '48a3a76e27mshd2769ef34d9a0dep1851f9jsnfb2975d32821',
-        'X-RapidAPI-Host': 'ronreiter-meme-generator.p.rapidapi.com',
+        'X-RapidAPI-Key': process.env.memeKEY || '48a3a76e27mshd2769ef34d9a0dep1851f9jsnfb2975d32821',
+        'X-RapidAPI-Host': process.env.memeHOST || 'ronreiter-meme-generator.p.rapidapi.com',
         useQueryString: true
       }
     };

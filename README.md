@@ -3,6 +3,8 @@ API-BASE
 
 This project contains a variety of free to use api's available on internet & i will be doing the implementation of those using nodejs server 😎!
 
+# UI update in near future!
+
 ## Please help & contribute to this small project!
 
 # API LIST:
@@ -15,7 +17,9 @@ all implemented api's are available in ./routes/name_of_api
 
 4.RAWG-games api (Free)
 
-5.music lyrics api!
+5.music lyrics api
+
+6.google translate api
 
 
 Explaination of each api is written below instructions
@@ -105,5 +109,14 @@ c.search - get search from those categories url:https://matchilling-chuck-norris
 
   d. https://genius.p.rapidapi.com/artists/id     -to get certain artist with id
 
+
+6.google translate api:
+    this api has three functions,
+
+    a. detect   - to detect language in which string is written
+    b. language - returns numbers of lang supportted by api
+    c. translate - takes source language and string -> returns string in  target laguage
+
+    go to ./routes/google-translate/g-translate.js & looks for comments to edit details to mix it up
 
 visit `https://rapidapi.com/collection/list-of-free-apis` for more details about these apis!

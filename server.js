@@ -14,6 +14,7 @@ const gamesRouter = require('./routes/games/games');
 const chucknorrisRouter = require('./routes/chucknorris/chucknorris');
 const musicRouter = require('./routes/music/genius');
 const gTranslateRouter = require('./routes/google-translate/g-translate');
+const trumpRouter = require('./routes/donald-trump/trump');
 
 // index page can receive some makeover
 app.get('/', (req,res)=>{
@@ -28,6 +29,7 @@ app.use("/api/games", gamesRouter);
 app.use("/api/chuck", chucknorrisRouter);
 app.use("/api/music", musicRouter);
 app.use("/api/translator", gTranslateRouter);
+app.use("/api/trump", trumpRouter);
 
 app.listen(process.env.PORT || 5000, () => {
     console.log('[+] Server restarted succesfully😎');

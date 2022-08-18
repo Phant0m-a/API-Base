@@ -21,6 +21,8 @@ all implemented api's are available in ./routes/name_of_api
 
 6.google translate api
 
+7.donald trump jokes
+
 
 Explaination of each api is written below instructions
 
@@ -119,4 +121,16 @@ c.search - get search from those categories url:https://matchilling-chuck-norris
 
     go to ./routes/google-translate/g-translate.js & looks for comments to edit details to mix it up
 
+
+7.donald trump jokes:
+
+    a. random  - returns random jokes https://matchilling-tronald-dump-v1.p.rapidapi.com/random/quote
+    
+    b. quotes_by_id  - give id and it will return joke. https://matchilling-tronald-dump-v1.p.rapidapi.com/quote/id
+
+    c. tag - return joke tied to the tag https://matchilling-tronald-dump-v1.p.rapidapi.com/tag/%7Btag%7D || https://matchilling-tronald-dump-v1.p.rapidapi.com/tag/
+
+    d. search  - search for a joke include url & params
+      url: 'https://matchilling-tronald-dump-v1.p.rapidapi.com/search/quote',
+  params: {size: '25', page: 'The page number', query: 'trump'},
 visit `https://rapidapi.com/collection/list-of-free-apis` for more details about these apis!

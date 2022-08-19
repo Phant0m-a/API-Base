@@ -15,6 +15,7 @@ const chucknorrisRouter = require('./routes/chucknorris/chucknorris');
 const musicRouter = require('./routes/music/genius');
 const gTranslateRouter = require('./routes/google-translate/g-translate');
 const trumpRouter = require('./routes/donald-trump/trump');
+const textspeechRouter = require('./routes/text-to-speech/text-to-speech');
 
 // index page can receive some makeover
 app.get('/', (req,res)=>{
@@ -30,6 +31,7 @@ app.use("/api/chuck", chucknorrisRouter);
 app.use("/api/music", musicRouter);
 app.use("/api/translator", gTranslateRouter);
 app.use("/api/trump", trumpRouter);
+app.use("/api/textTospeech", textspeechRouter);
 
 app.listen(process.env.PORT || 5000, () => {
     console.log('[+] Server restarted succesfully😎');

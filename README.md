@@ -82,6 +82,27 @@ supports endpoints like,
 
     f. id      -get `id game` with that id eg. url:https://free-nba.p.rapidapi.com/games/id
 
+    functions:
+        /list/:query
+      query:
+      {1. stats
+      2. games
+      3. teams
+      4. players}
+
+      replace with word query and it gives list of the certain option
+      eg: /list/games*
+
+        /query/:q/:id
+      
+      q:{1. teams
+      2. players
+      3. games}
+
+      id: {id of item}
+
+      eg: /query/players/14   {gives out data about the certain player}
+
     go to ./routes/freeNba/freeNba.js and there edit the url:  someaddress/{endpoint} eg address/listquotes
 
 
@@ -107,6 +128,13 @@ supports endpoints like,
 
 
       go to ./routes/chucknorris/chucknorris.js and there edit the url:  someaddress/{endpoint} eg address/{edit}
+    
+    usage:
+
+    /category  - get category list
+    /categroy/:cat  - get specific category jokes list
+    /search/:id  - get joke by id
+
 
 
 5.music-lyrics api:
@@ -144,6 +172,12 @@ supports endpoints like,
         url: 'https://matchilling-tronald-dump-v1.p.rapidapi.com/search/quote',
       params: {size: '25', page: 'The page number', query: 'trump'},
 
+    usage:
+    /quote/:id search by id
+    /quote-text/:id search by text (not working for now due to page number problem)
+    /tag  get tags list
+    /tag/:id search by id
+    
 
 8.Text to speech:
 

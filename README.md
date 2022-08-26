@@ -51,59 +51,59 @@ create .env file and put host and key for individual api there! (i have also pro
 
 
 1. memeApi:
-  supports variety of endpoints
+    supports variety of endpoints
 
-  go to ./routes/memeapi/memeapi.js and there edit the url:  someaddress/{endpoint} eg address/listquotes
+    go to ./routes/memeapi/memeapi.js and there edit the url:  someaddress/{endpoint} eg address/listquotes
 
 
 2. currencyApi:
 
-    supports endpoints like,
+  supports endpoints like,
 
-    a. listquotes  url= /api/currencyexc/listquote
+  a. listquotes  url= /api/currencyexc/listquote
 
-    b. exchange    url= /api/currencyexc/exchange
+  b. exchange    url= /api/currencyexc/exchange
 
-    go to ./routes/currencyexc/currencyexc.js and there edit the url:  someaddress/{endpoint} eg address/listquotes
+  go to ./routes/currencyexc/currencyexc.js and there edit the url:  someaddress/{endpoint} eg address/listquotes
 
 
 3. free NBA:
 supports endpoints like,
 
-    a. player  -get list of `all player` eg. url: https://free-nba.p.rapidapi.com/players
+  a. player  -get list of `all player` eg. url: https://free-nba.p.rapidapi.com/players
 
-    b. id      -get `player` with that id eg. url: https://free-nba.p.rapidapi.com/players/id
+  b. id      -get `player` with that id eg. url: https://free-nba.p.rapidapi.com/players/id
 
-    c. teams   -get `all teams` eg. url:https://free-nba.p.rapidapi.com/teams/
+  c. teams   -get `all teams` eg. url:https://free-nba.p.rapidapi.com/teams/
 
-    d. id      -get `id team` with that id eg. url:https://free-nba.p.rapidapi.com/teams/`id`
+  d. id      -get `id team` with that id eg. url:https://free-nba.p.rapidapi.com/teams/`id`
 
-    e. games   -get `all games` eg. url:https://free-nba.p.rapidapi.com/games
+  e. games   -get `all games` eg. url:https://free-nba.p.rapidapi.com/games
 
-    f. id      -get `id game` with that id eg. url:https://free-nba.p.rapidapi.com/games/id
+  f. id      -get `id game` with that id eg. url:https://free-nba.p.rapidapi.com/games/id
 
-    functions:
-        /list/:query
-      query:
-      {1. stats
-      2. games
-      3. teams
-      4. players}
+  functions:
+      /list/:query
+    query:
+    {1. stats
+    2. games
+    3. teams
+    4. players}
 
-      replace with word query and it gives list of the certain option
-      eg: /list/games*
+    replace with word query and it gives list of the certain option
+    eg: /list/games*
 
-        /query/:q/:id
-      
-      q:{1. teams
-      2. players
-      3. games}
+      /query/:q/:id
+    
+    q:{1. teams
+    2. players
+    3. games}
 
-      id: {id of item}
+    id: {id of item}
 
-      eg: /query/players/14   {gives out data about the certain player}
+    eg: /query/players/14   {gives out data about the certain player}
 
-    go to ./routes/freeNba/freeNba.js and there edit the url:  someaddress/{endpoint} eg address/listquotes
+  go to ./routes/freeNba/freeNba.js and there edit the url:  someaddress/{endpoint} eg address/listquotes
 
 
 4.RAWG-games api:
@@ -196,5 +196,26 @@ supports endpoints like,
     c.song {detect, top-track, recomendations, detect(2 versions), details, count}
 
     d.chart {list, track}
+
+    usage:
+    /  recommendations -  {in params we can add key of some sort}
+
+    /search/:song search for song- {add song id of your choice to search on shazam!}
+
+    /top-tracks/:artist top=track {search toptrack of an artist using artist id}
+
+    /auto-complete/:song auto-complete {we can just tpye phrase of song and it will search for that on its own, add song text in :song}
+
+    /get-count/:song get-count {it counts something i guess, replace song with id of Song}
+
+    /list - LIST {get list of songs i guess}
+
+    /chart -  {get chart of all popular songs}
+
+    /get-detail/:id -get details {it gets broader details about the song}
+
+    /detect/:song-data  detect {it can accept string of a song using some sort of speech to text then find the song}
+    v2 is lil better!
+
 
     visit `https://rapidapi.com/collection/list-of-free-apis` for more details about these apis!
